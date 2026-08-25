@@ -1,3 +1,5 @@
+using CareerIntelligencePlatform.Domain.Exceptions;
+
 namespace CareerIntelligencePlatform.Domain.Entities;
 
 public class Job
@@ -11,22 +13,24 @@ public class Job
   public Job(string title, string description)
   {
     if (string.IsNullOrWhiteSpace(title))
-      throw new ArgumentException("Job title is required.", nameof(title));
+      throw new DomainException(
+        DomainErrorCodes.JobTitleRequired,
+        "Job title is required.");
 
     if (title.Length > 200)
-      throw new ArgumentException(
-          "Job title cannot exceed 200 characters.",
-          nameof(title));
+      throw new DomainException(
+        DomainErrorCodes.JobTitleTooLong,
+        "Job title cannot exceed 200 characters.");
 
     if (string.IsNullOrWhiteSpace(description))
-      throw new ArgumentException(
-          "Job description is required.",
-          nameof(description));
+      throw new DomainException(
+        DomainErrorCodes.JobDescriptionRequired,
+        "Job description is required.");
 
     if (description.Length > 5000)
-      throw new ArgumentException(
-          "Job description cannot exceed 5000 characters.",
-          nameof(description));
+      throw new DomainException(
+          DomainErrorCodes.JobDescriptionTooLong,
+          "Job description cannot exceed 5000 characters.");
 
     Id = Guid.NewGuid();
     Title = title;
