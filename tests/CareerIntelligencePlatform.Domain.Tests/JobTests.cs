@@ -1,5 +1,6 @@
 using CareerIntelligencePlatform.Domain.Entities;
 using CareerIntelligencePlatform.Domain.Exceptions;
+using CareerIntelligencePlatform.Domain.ValueObjects;
 
 namespace CareerIntelligencePlatform.Domain.Tests;
 
@@ -116,5 +117,34 @@ public class JobTests
 
     // Assert
     Assert.Equal(5000, job.Description.Length);
+  }
+
+  [Fact]
+  public void Constructor_ShouldAssignSalary_WhenSalaryIsProvided()
+  {
+    // Arrange
+    const string title = "Senior .NET Developer";
+    const string description = "Backend development using ASP.NET Core.";
+    var salary = Money.Create(9000000m, "COP");
+
+    // Act
+    var job = new Job(title, description, salary);
+
+    // Assert
+    Assert.Equal(salary, job.Salary);
+  }
+
+  [Fact]
+  public void Constructor_ShouldCreateJobWithoutSalary_WhenSalaryIsNotProvided()
+  {
+    // Arrange
+    const string title = "Senior .NET Developer";
+    const string description = "Backend development using ASP.NET Core.";
+
+    // Act
+    var job = new Job(title, description);
+
+    // Assert
+    Assert.Null(job.Salary);
   }
 }

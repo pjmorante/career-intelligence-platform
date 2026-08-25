@@ -1,4 +1,5 @@
 using CareerIntelligencePlatform.Domain.Exceptions;
+using CareerIntelligencePlatform.Domain.ValueObjects;
 
 namespace CareerIntelligencePlatform.Domain.Entities;
 
@@ -9,8 +10,9 @@ public class Job
   public string Title { get; private set; }
 
   public string Description { get; private set; }
+  public Money? Salary { get; private set; }
 
-  public Job(string title, string description)
+  public Job(string title, string description, Money? salary = null)
   {
     if (string.IsNullOrWhiteSpace(title))
       throw new DomainException(
@@ -35,5 +37,6 @@ public class Job
     Id = Guid.NewGuid();
     Title = title;
     Description = description;
+    Salary = salary;
   }
 }
