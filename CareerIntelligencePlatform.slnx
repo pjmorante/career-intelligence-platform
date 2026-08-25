@@ -1,2 +1,11 @@
 <Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CareerIntelligencePlatform.Api/CareerIntelligencePlatform.Api.csproj" />
+    <Project Path="src/CareerIntelligencePlatform.Application/CareerIntelligencePlatform.Application.csproj" />
+    <Project Path="src/CareerIntelligencePlatform.Domain/CareerIntelligencePlatform.Domain.csproj" />
+    <Project Path="src/CareerIntelligencePlatform.Infrastructure/CareerIntelligencePlatform.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CareerIntelligencePlatform.Domain.Tests/CareerIntelligencePlatform.Domain.Tests.csproj" />
+  </Folder>
 </Solution>
