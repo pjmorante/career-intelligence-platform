@@ -19,4 +19,28 @@ public class JobTests
     Assert.Equal(title, job.Title);
     Assert.Equal(description, job.Description);
   }
+
+  [Fact]
+  public void Constructor_ShouldThrow_WhenTitleIsEmpty()
+  {
+    // Arrange
+    const string title = "";
+    const string description = "Backend development using ASP.NET Core.";
+
+    // Act & Assert
+    Assert.Throws<ArgumentException>(
+        () => new Job(title, description));
+  }
+
+  [Fact]
+  public void Constructor_ShouldThrow_WhenDescriptionIsEmpty()
+  {
+    // Arrange
+    const string title = "Senior .NET Developer";
+    const string description = "";
+
+    // Act & Assert
+    Assert.Throws<ArgumentException>(
+        () => new Job(title, description));
+  }
 }
