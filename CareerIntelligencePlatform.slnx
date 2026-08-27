@@ -6,6 +6,7 @@
     <Project Path="src/CareerIntelligencePlatform.Infrastructure/CareerIntelligencePlatform.Infrastructure.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/CareerIntelligencePlatform.Application.Tests/CareerIntelligencePlatform.Application.Tests.csproj" />
     <Project Path="tests/CareerIntelligencePlatform.Domain.Tests/CareerIntelligencePlatform.Domain.Tests.csproj" />
   </Folder>
 </Solution>

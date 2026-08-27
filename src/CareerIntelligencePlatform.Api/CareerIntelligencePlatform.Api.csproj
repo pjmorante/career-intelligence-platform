@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CareerIntelligencePlatform.Application\CareerIntelligencePlatform.Application.csproj" />
+    <ProjectReference Include="..\CareerIntelligencePlatform.Infrastructure\CareerIntelligencePlatform.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

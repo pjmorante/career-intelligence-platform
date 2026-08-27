@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\CareerIntelligencePlatform.Domain\CareerIntelligencePlatform.Domain.csproj" />
+    <ProjectReference Include="..\..\src\CareerIntelligencePlatform.Application\CareerIntelligencePlatform.Application.csproj" />
   </ItemGroup>
 
 </Project>
