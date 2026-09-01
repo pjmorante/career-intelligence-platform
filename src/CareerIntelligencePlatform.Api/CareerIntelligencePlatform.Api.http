@@ -1,6 +1,17 @@
 @CareerIntelligencePlatform.Api_HostAddress = http://localhost:5052
 
-GET {{CareerIntelligencePlatform.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+### Create Job
+
+POST {{CareerIntelligencePlatform.Api_HostAddress}}/api/jobs
+Content-Type: application/json
+
+{
+  "title": "Senior .NET Developer",
+  "description": "Backend development using ASP.NET Core.",
+  "salary": {
+    "amount": 9000000,
+    "currency": "COP"
+  }
+}
 
 ###

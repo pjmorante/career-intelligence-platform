@@ -8,5 +8,6 @@
   <Folder Name="/tests/">
     <Project Path="tests/CareerIntelligencePlatform.Application.Tests/CareerIntelligencePlatform.Application.Tests.csproj" />
     <Project Path="tests/CareerIntelligencePlatform.Domain.Tests/CareerIntelligencePlatform.Domain.Tests.csproj" />
+    <Project Path="tests/CareerIntelligencePlatform.Infrastructure.Tests/CareerIntelligencePlatform.Infrastructure.Tests.csproj" />
   </Folder>
 </Solution>
