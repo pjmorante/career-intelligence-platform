@@ -6,20 +6,17 @@ POST {{CareerIntelligencePlatform.Api_HostAddress}}/api/jobs
 Content-Type: application/json
 
 {
-  "title": "Senior .NET Developer",
-  "description": "Backend development using ASP.NET Core.",
+  "title": "Senior Frontend Developer",
+  "description": "Frontend development using React and MUI.",
   "salary": {
     "amount": 9000000,
     "currency": "COP"
   }
 }
 
-### Create Job - Invalid Title
-POST {{CareerIntelligencePlatform.Api_HostAddress}}/api/jobs
-Content-Type: application/json
+### 
+GET {{CareerIntelligencePlatform.Api_HostAddress}}/api/jobs/4100e9b7-e568-4bb6-b0db-cf1c92cea365
 
-{
-  "title": "",
-  "description": "Backend development using ASP.NET Core.",
-  "salary": null
-}
+### 
+GET {{CareerIntelligencePlatform.Api_HostAddress}}/api/jobs/00000000-0000-0000-0000-000000000000
+

@@ -3,6 +3,7 @@ using CareerIntelligencePlatform.Domain.ValueObjects;
 using CareerIntelligencePlatform.Infrastructure.Persistence;
 using CareerIntelligencePlatform.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace CareerIntelligencePlatform.Infrastructure.Tests;
 

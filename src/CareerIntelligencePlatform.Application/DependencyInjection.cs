@@ -1,4 +1,5 @@
 using CareerIntelligencePlatform.Application.Jobs.CreateJob;
+using CareerIntelligencePlatform.Application.Jobs.GetJobById;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,6 +13,7 @@ public static class DependencyInjection
     services.AddValidatorsFromAssemblyContaining<CreateJobCommandValidator>();
 
     services.AddScoped<CreateJobHandler>();
+    services.AddScoped<GetJobByIdHandler>();
 
     return services;
   }
