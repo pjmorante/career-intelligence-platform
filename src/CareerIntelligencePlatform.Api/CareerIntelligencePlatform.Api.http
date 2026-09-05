@@ -14,4 +14,12 @@ Content-Type: application/json
   }
 }
 
-###
+### Create Job - Invalid Title
+POST {{CareerIntelligencePlatform.Api_HostAddress}}/api/jobs
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": "Backend development using ASP.NET Core.",
+  "salary": null
+}
