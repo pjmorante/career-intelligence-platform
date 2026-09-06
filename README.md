@@ -10,12 +10,13 @@ The goal of this project is to design and implement a production-oriented backen
 - ASP.NET Core
 - C#
 - Git / GitHub
-- Docker
-- Azure
-- Bicep
 - SQL Server
 - Entity Framework Core
 - xUnit
+- Docker
+- Kubernetes
+- Azure
+- Bicep
 
 ## Architecture
 
@@ -29,5 +30,8 @@ src/
 └── CareerIntelligencePlatform.Infrastructure
 
 tests/
-└── CareerIntelligencePlatform.Domain.Tests
+├── CareerIntelligencePlatform.Domain.Tests
+├── CareerIntelligencePlatform.Application.Tests
+├── CareerIntelligencePlatform.Infrastructure.Tests
+└── CareerIntelligencePlatform.Api.Tests
 ```
